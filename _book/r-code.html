@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>R-code | Portfolio.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="R-code | Portfolio.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R-code | Portfolio.knit" />
+  
+  
+  
+
+<meta name="author" content="Anouk Leendertse" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="beoordeling.html"/>
+<link rel="next" href="r-packages.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Portfolio</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i>Curriculum Vitae</a>
+<ul>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#about-me"><i class="fa fa-check"></i>About me</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#education"><i class="fa fa-check"></i>Education</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#work-experience"><i class="fa fa-check"></i>Work experience</a>
+<ul>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#etos-retail-assistant"><i class="fa fa-check"></i>Etos – Retail Assistant</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#trekpleister-retail-assistant-keyholder"><i class="fa fa-check"></i>Trekpleister – Retail Assistant &amp; keyholder</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#technical-skills"><i class="fa fa-check"></i>Technical skills</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#personal-skills"><i class="fa fa-check"></i>Personal skills</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#languages"><i class="fa fa-check"></i>Languages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="future-goals.html"><a href="future-goals.html"><i class="fa fa-check"></i>Future goals</a>
+<ul>
+<li class="chapter" data-level="" data-path="future-goals.html"><a href="future-goals.html#where-would-i-like-to-work-in-1-or-2-years-what-would-my-dream-job-look-like"><i class="fa fa-check"></i>1. Where would I like to work in 1 or 2 years? What would my dream job look like?</a></li>
+<li class="chapter" data-level="" data-path="future-goals.html"><a href="future-goals.html#what-is-my-current-position-regarding-the-skills-needed-for-this-job-which-skills-do-i-already-have"><i class="fa fa-check"></i>2. What is my current position regarding the skills needed for this job? Which skills do I already have?</a></li>
+<li class="chapter" data-level="" data-path="future-goals.html"><a href="future-goals.html#which-skills-would-i-still-need-or-like-to-learn"><i class="fa fa-check"></i>3. Which skills would I still need or like to learn?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="project-vrije-opdracht.html"><a href="project-vrije-opdracht.html"><i class="fa fa-check"></i>Project vrije opdracht</a></li>
+<li class="chapter" data-level="" data-path="datastructuur.html"><a href="datastructuur.html"><i class="fa fa-check"></i>Datastructuur</a>
+<ul>
+<li class="chapter" data-level="" data-path="datastructuur.html"><a href="datastructuur.html#a"><i class="fa fa-check"></i>3a</a></li>
+<li class="chapter" data-level="" data-path="datastructuur.html"><a href="datastructuur.html#b"><i class="fa fa-check"></i>3b</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i>Reproducible-science</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#a-1"><i class="fa fa-check"></i>4a</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#het-nut-van-de-controles-en-wat-ze-zijn"><i class="fa fa-check"></i>Het nut van de controles en wat ze zijn:</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#nut-van-normalisatie"><i class="fa fa-check"></i>Nut van normalisatie</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#stappenplan"><i class="fa fa-check"></i>Stappenplan:</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#bronnen"><i class="fa fa-check"></i>Bronnen</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#b-1"><i class="fa fa-check"></i>4b</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="beoordeling.html"><a href="beoordeling.html"><i class="fa fa-check"></i>Beoordeling:</a></li>
+<li class="chapter" data-level="" data-path="r-code.html"><a href="r-code.html"><i class="fa fa-check"></i>R-code</a></li>
+<li class="chapter" data-level="" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i>R-packages</a></li>
+<li class="chapter" data-level="" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i>Bronvermelding</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-code" class="section level1 unnumbered hasAnchor">
+<h1>R-code<a href="r-code.html#r-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>link naar de code: <a href="https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/tree/master" class="uri">https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/tree/master</a></p>
+<p>Ik vind dit nogal moeilijk, omdat de code anders lijkt dan wat ik geleerd heb. Ik ga dit nog even vragen in de lessen.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="beoordeling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

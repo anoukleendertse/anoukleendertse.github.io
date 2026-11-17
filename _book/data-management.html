@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Hoofdstuk 2 Data management | Portfolio</title>
+  <meta name="description" content="Hoofdstuk 2 Data management | Portfolio" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Hoofdstuk 2 Data management | Portfolio" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Hoofdstuk 2 Data management | Portfolio" />
+  
+  
+  
+
+<meta name="author" content="Anouk Leendertse" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="project-vrije-opdracht.html"/>
+<link rel="next" href="reproducible-science.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Portfolio</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i>Curriculum Vitae</a>
+<ul>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#about-me"><i class="fa fa-check"></i>About me</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#education"><i class="fa fa-check"></i>Education</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#work-experience"><i class="fa fa-check"></i>Work experience</a>
+<ul>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#etos-retail-assistant"><i class="fa fa-check"></i>Etos – Retail Assistant</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#trekpleister-retail-assistant-keyholder"><i class="fa fa-check"></i>Trekpleister – Retail Assistant &amp; keyholder</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#technical-skills"><i class="fa fa-check"></i>Technical skills</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#personal-skills"><i class="fa fa-check"></i>Personal skills</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#languages"><i class="fa fa-check"></i>Languages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="future-goals.html"><a href="future-goals.html"><i class="fa fa-check"></i>Future goals</a>
+<ul>
+<li class="chapter" data-level="" data-path="future-goals.html"><a href="future-goals.html#where-would-i-like-to-work-in-1-or-2-years-what-would-my-dream-job-look-like"><i class="fa fa-check"></i>1. Where would I like to work in 1 or 2 years? What would my dream job look like?</a></li>
+<li class="chapter" data-level="" data-path="future-goals.html"><a href="future-goals.html#what-is-my-current-position-regarding-the-skills-needed-for-this-job-which-skills-do-i-already-have"><i class="fa fa-check"></i>2. What is my current position regarding the skills needed for this job? Which skills do I already have?</a></li>
+<li class="chapter" data-level="" data-path="future-goals.html"><a href="future-goals.html#which-skills-would-i-still-need-or-like-to-learn"><i class="fa fa-check"></i>3. Which skills would I still need or like to learn?</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="project-vrije-opdracht.html"><a href="project-vrije-opdracht.html"><i class="fa fa-check"></i><b>1</b> Project vrije opdracht</a></li>
+<li class="chapter" data-level="2" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i><b>2</b> Data management</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-management.html"><a href="data-management.html#datastructuur"><i class="fa fa-check"></i>datastructuur</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-management.html"><a href="data-management.html#a"><i class="fa fa-check"></i>3a</a></li>
+<li class="chapter" data-level="" data-path="data-management.html"><a href="data-management.html#b"><i class="fa fa-check"></i>3b</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i><b>3</b> Reproducible-science</a></li>
+<li class="chapter" data-level="4" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>4</b> R-packages</a></li>
+<li class="chapter" data-level="5" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i><b>5</b> Bronvermelding</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Portfolio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-management" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Hoofdstuk 2</span> Data management<a href="data-management.html#data-management" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="datastructuur" class="section level2 unnumbered hasAnchor">
+<h2>datastructuur<a href="data-management.html#datastructuur" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="a" class="section level3 unnumbered hasAnchor">
+<h3>3a<a href="data-management.html#a" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/dir_tree_opdr3a.png" alt="" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="images/README_screenshot_opdr3a.png" alt="" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="images/README_screenshot_opdr3a.png" alt="" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<div id="b" class="section level3 unnumbered hasAnchor">
+<h3>3b<a href="data-management.html#b" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/portfolio_dirtree3.png" alt="" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="images/portfolio_dirtree4.png" alt="" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
+<pre><code>##  [1] &quot;Project: Portfolio&quot;                                                                                  
+##  [2] &quot;Cursus: DSFB2&quot;                                                                                       
+##  [3] &quot;Docenten: Bas van Gestel, Chris van Oevelen, René van der Ploeg en Michael Liem&quot;                     
+##  [4] &quot;&quot;                                                                                                    
+##  [5] &quot;PROJECTSTRUCTUUR&quot;                                                                                    
+##  [6] &quot;&quot;                                                                                                    
+##  [7] &quot;De projectmap is als volgt georganiseerd (zie ook 04-data-management.Rmd):&quot;                          
+##  [8] &quot;&quot;                                                                                                    
+##  [9] &quot;bookdown_portfolio/&quot;                                                                                 
+## [10] &quot;│&quot;                                                                                                   
+## [11] &quot;├── 01-CV.Rmd&quot;                                                                                       
+## [12] &quot;├── 02-future-goals.Rmd&quot;                                                                             
+## [13] &quot;├── 03-vrijeopdr.Rmd&quot;                                                                                
+## [14] &quot;├── 04-data-management.Rmd&quot;                                                                          
+## [15] &quot;├── 05-reproducible-science.Rmd&quot;                                                                     
+## [16] &quot;├── 06-R-package.Rmd&quot;                                                                                
+## [17] &quot;├── 07-bronvermelding.Rmd&quot;                                                                           
+## [18] &quot;│&quot;                                                                                                   
+## [19] &quot;├── images/&quot;                                                                                         
+## [20] &quot;│   ├── dir_tree_opdr3a.png&quot;                                                                         
+## [21] &quot;│   ├── portfolio_dirtree2.png&quot;                                                                      
+## [22] &quot;│   ├── profielfoto.jpg&quot;                                                                             
+## [23] &quot;│   └── README_screenshot_opdr3a.png&quot;                                                                
+## [24] &quot;│&quot;                                                                                                   
+## [25] &quot;├── index.Rmd&quot;                                                                                       
+## [26] &quot;├── packages.bib&quot;                                                                                    
+## [27] &quot;├── bookdown.Rproj&quot;                                                                                  
+## [28] &quot;├── _bookdown.yml&quot;                                                                                   
+## [29] &quot;├── _output.yml&quot;                                                                                     
+## [30] &quot;└── _book/&quot;                                                                                          
+## [31] &quot;&quot;                                                                                                    
+## [32] &quot;INHOUD VAN HET PORTFOLIO&quot;                                                                            
+## [33] &quot;&quot;                                                                                                    
+## [34] &quot;Het portfolio bestaat uit de volgende onderdelen:&quot;                                                   
+## [35] &quot;&quot;                                                                                                    
+## [36] &quot;01-CV.Rmd -)                   Curriculum vitae&quot;                                                     
+## [37] &quot;02-future-goals.Rmd -)         toekomstige doelen en ambities&quot;                                       
+## [38] &quot;03-vrijeopdr.Rmd -)            Vrije opdracht&quot;                                                       
+## [39] &quot;04-data-management.Rmd -)      Opdracht over datamanagement&quot;                                         
+## [40] &quot;05-reproducible-science.Rmd -) Opdracht over reproduceerbare wetenschap&quot;                             
+## [41] &quot;06-R-package.Rmd -)            Opdracht over R-packages&quot;                                             
+## [42] &quot;07-bronvermelding.Rmd -)       Bronnen en literatuur&quot;                                                
+## [43] &quot;&quot;                                                                                                    
+## [44] &quot;BESTANDSBESCHRIJVINGEN&quot;                                                                              
+## [45] &quot;&quot;                                                                                                    
+## [46] &quot;R Markdown-bestanden (.Rmd): bevatten de hoofdstukken en inhoud van het portfolio.&quot;                  
+## [47] &quot;index.Rmd: bevat de introductie en vormt het startpunt van het Bookdown-project.&quot;                    
+## [48] &quot;images/: bevat afbeeldingen die in het portfolio worden gebruikt.&quot;                                   
+## [49] &quot;packages.bib: bevat bibliografische referenties.&quot;                                                    
+## [50] &quot;_bookdown.yml: bevat de configuratie en volgorde van de hoofdstukken.&quot;                               
+## [51] &quot;_output.yml: bevat de instellingen voor de uitvoer van het boek.&quot;                                    
+## [52] &quot;bookdown.Rproj: het RStudio-projectbestand.&quot;                                                         
+## [53] &quot;_book/: bevat de gegenereerde HTML-versie van het portfolio.&quot;                                        
+## [54] &quot;&quot;                                                                                                    
+## [55] &quot;HET PORTFOLIO RENDEREN&quot;                                                                              
+## [56] &quot;&quot;                                                                                                    
+## [57] &quot;Het project kan worden geopend in RStudio door bookdown.Rproj te openen.&quot;                            
+## [58] &quot;Om het volledige portfolio opnieuw te genereren, gebruik je in de R-console: bookdown::render_book()&quot;
+## [59] &quot;Bookdown genereert vervolgens de HTML-bestanden in de map _book/.&quot;                                   
+## [60] &quot;&quot;                                                                                                    
+## [61] &quot;GEBRUIKTE TECHNOLOGIEN&quot;                                                                              
+## [62] &quot;&quot;                                                                                                    
+## [63] &quot;- R&quot;                                                                                                 
+## [64] &quot;- RStudio&quot;                                                                                           
+## [65] &quot;- R Markdown&quot;                                                                                        
+## [66] &quot;- Bookdown&quot;                                                                                          
+## [67] &quot;- Git (voor versiebeheer)&quot;                                                                           
+## [68] &quot;- Auteur&quot;                                                                                            
+## [69] &quot;&quot;                                                                                                    
+## [70] &quot;Dit portfolio is gemaakt als onderdeel van de cursus Biology 2.&quot;</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="project-vrije-opdracht.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reproducible-science.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
