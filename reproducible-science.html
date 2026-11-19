@@ -76,12 +76,12 @@
 <ul>
 <li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#about-me"><i class="fa fa-check"></i>About me</a></li>
 <li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#education"><i class="fa fa-check"></i>Education</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#technical-skills"><i class="fa fa-check"></i>Technical skills</a></li>
 <li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#work-experience"><i class="fa fa-check"></i>Work experience</a>
 <ul>
 <li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#etos-retail-assistant"><i class="fa fa-check"></i>Etos – Retail Assistant</a></li>
 <li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#trekpleister-retail-assistant-keyholder"><i class="fa fa-check"></i>Trekpleister – Retail Assistant &amp; keyholder</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#technical-skills"><i class="fa fa-check"></i>Technical skills</a></li>
 <li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#personal-skills"><i class="fa fa-check"></i>Personal skills</a></li>
 <li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#languages"><i class="fa fa-check"></i>Languages</a></li>
 </ul></li>
@@ -393,8 +393,28 @@ Uit de zesultaten kwam dat de onderzoekers merkte dat de transmissiesnelheden va
 </div>
 <div id="r-code" class="section level2 unnumbered hasAnchor">
 <h2>R-code<a href="reproducible-science.html#r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>link naar de code: <a href="https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/tree/master" class="uri">https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/tree/master</a></p>
-<p>Ik vind dit nogal moeilijk, omdat de code anders lijkt dan wat ik geleerd heb. Ik ga dit nog even vragen in de lessen.</p>
+<p>Voor de R-code begrijpen er uitwerken is een ander artikel gekozen, omdat het artikel hierboven niet in R gewerkt heeft.</p>
+<p>Hier kan je het artikel vinden: <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0278495" class="uri">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0278495</a></p>
+<p><strong>Korte introductie:</strong></p>
+<p>het gaat over hoe influenza zich verspreidt binnen een varkenshouderij en tussen varkens en medewerkers. Met behulp van R wordt nagebootst hoe een virus zich door een populatie kan verspreiden. Verder gebruiken ze het welbekende SEIR-model voor hun onderzoek.
+De aangepaste data is te vinden in de ruwe_data folder, in mijn bookdown_portfolio folder.</p>
+<p><strong>Aanpassingen voor reproduceerbare code:</strong></p>
+<p>Tijdens het uitvoeren van de originele R-code liep ik tegen enkele fouten aan bij het berekenen van de rapportagewaarden. Om de code correct uit te kunnen voeren en de resultaten reproduceerbaar te maken, heb ik de volgende aanpassingen gedaan.</p>
+<p>Je ziet al gelijk dat de packages een # ervoor hebben staan in de code, hiervoor werkt dat automatisch al niet. Verder moet je eerst het GillespieSSA package instaleren dit staat wel boven aan de code, dat is dus duidelijk.</p>
+<p>Verder duurt de R-code die begint bij regel 304 en eindigt bij regel 1028 best lang. Maar het is wel met een if statement geschreven, dus het had nog langer kunnen duren. Dit is waarschijnlijk gewoon hoe de code werkt.</p>
+<p>Ook moet je de ‘saveRDS’ aanpassen naar je eigen pad. Dit had makkelijker geweest als er boven aan het begin van de code een variabele was aangemaakt voor het pad. Dus bovenaan het script één variabele aanmaken met het pad naar je projectmap.</p>
+<p>Dan vanaf regel 1057-1066 loop de code vast:</p>
+<p><strong>Time to Second Room Infection uitleg</strong></p>
+<p>Bij het berekenen van de tijd tot infectie in een tweede ruimte ontstond een fout wanneer er binnen een iteratie geen infectie in de andere ruimtes plaatsvond. De functie which() gaf dan een lege vector terug, waardoor summarise() geen waarde kon verwerken.</p>
+<p>Ik heb dit opgelost door first() en default = NA_real_ te gebruiken, dan krijgt een iteratie waarin geen infectie wordt gevonden de waarde NA en komt er geen foutmelding.</p>
+<p>Daarnaast heb ik arrange(iter, t) toegevoegd om ervoor te zorgen dat de tijdstippen chronologisch gesorteerd werden.</p>
+<p><strong>Minimum Time to Peak Infection uitleg</strong></p>
+<p>Bij het berekenen van het tijdstip waarop het maximale aantal geïnfecteerde varkens wordt bereikt, ontstond een fout doordat het maximale aantal infecties op meerdere tijdstippen kon voorkomen. Hierdoor gaf de oorspronkelijke code meerdere waarden terug voor t_peak, terwijl summarise() één waarde per iteratie verwacht.</p>
+<p>Ik heb dit opgelost door min() toe te voegen aan de berekening van t_peak. Hierdoor wordt het eerste tijdstip geselecteerd waarop het maximale aantal geïnfecteerde varkens wordt bereikt.</p>
+<p>Ook heb ik de bestaande regel filter(max_I != 0) geactiveerd. Deze regel stond oorspronkelijk als # in de code en verwijdert iteraties waarin geen varkens geïnfecteerd zijn geraakt. Dat is dus wel goed aangegeven door de maker.</p>
+<p>Als laatst heb ik de tussenliggende berekening summarise(min_t_peak = min(t_peak)) verwijderd. Deze berekening selecteerde namelijk alleen het vroegste piektijdstip over alle iteraties. Hierdoor zouden de mediaan en percentielen niet correct over de afzonderlijke simulaties worden berekend. In de aangepaste code worden deze statistieken rechtstreeks over alle individuele piektijden berekend.</p>
+<p><strong>Cijfer geven</strong></p>
+<p>De leesbaarheid van het onderzoek geeft ik een 4 en de reproduceerbaarheid een 3. De 3 geef ik, omdat ik best wat moest aanpassen aan de code en het dus niet in een keer kon runnen, maar de basis en ook gedeeltes van de code waren goed uitgelegd. De leesbaarheid geeft ik een 4, omdat het op zowel github als in het R bestand duidelijk te lezen was waar de code over ging en waar dingen stonden.</p>
 
 </div>
 </div>
